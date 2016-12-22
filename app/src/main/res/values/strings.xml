@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PopularMovies2</string>
+    <string name="grid_item_poster">Poster</string>
+    <string name="action_settings">Setting</string>
+    <string name="poster_text">Poster</string>
+    <string name="mark_as_favorite_text">Mark as\n favorite</string>
+    <string name="divider_text">divider</string>
+</resources>
