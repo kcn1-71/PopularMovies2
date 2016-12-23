@@ -1,8 +1,24 @@
 <resources>
-    <string name="app_name">PopularMovies2</string>
-    <string name="grid_item_poster">Poster</string>
-    <string name="action_settings">Setting</string>
+    <string name="app_name">Popular movies</string>
+
     <string name="poster_text">Poster</string>
     <string name="mark_as_favorite_text">Mark as\n favorite</string>
     <string name="divider_text">divider</string>
+    <string name="settings_text">Settings</string>
+    <string name="error_text">ERROR</string>
+
+
+    <string name="pref_title">Order by</string>
+    <string name="pref_key">order by</string>
+
+    <string name="pref_order_by_popularity_label">Popularity</string>
+    <string name="pref_order_by_top_rated_label">Top-rated</string>
+    <string name="pref_order_by_favorites_label">Favorites</string>
+
+    <string name="pref_order_by_popularity_value" translatable="false">popularity</string>
+    <string name="pref_order_by_top_rated_value" translatable="false">top-rated</string>
+    <string name="pref_order_by_favorites_value" translatable="false">favorites</string>
+
+
+
 </resources>

@@ -1,11 +1,9 @@
-package com.udacity.popularmovies2.content;
+package com.udacity.popularmovies2.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.Set;
-
-class Movie implements Parcelable {
+public class Movie implements Parcelable {
 
     private static final String LOG_TAG = Movie.class.getSimpleName();
 
@@ -15,7 +13,6 @@ class Movie implements Parcelable {
     private String overview;
     private Double rating;
     private String releaseDate;
-    private Set<Trailer> trailers;
 
     public Movie(String id, String title, String posterPath, String overview, Double rating, String releaseDate) {
         this.id = id;
@@ -61,14 +58,6 @@ class Movie implements Parcelable {
 
     public String getReleaseDate() {
         return releaseDate;
-    }
-
-    public Set<Trailer> getTrailers() {
-        return trailers;
-    }
-
-    public void setTrailers(Set<Trailer> trailers) {
-        this.trailers = trailers;
     }
 
     @Override
