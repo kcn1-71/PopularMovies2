@@ -6,34 +6,31 @@ import android.os.Parcelable;
 public class Movie implements Parcelable {
 
     private static final String LOG_TAG = Movie.class.getSimpleName();
+    private static final String HTTP_IMAGE_TMDB = "http://image.tmdb.org/t/p/w300";
 
     private String id;
     private String title;
-    private String posterPath;
+    private String poster_path;
     private String overview;
-    private Double rating;
-    private String releaseDate;
+    private Double vote_average;
+    private String release_date;
 
-    public Movie(String id, String title, String posterPath, String overview, Double rating, String releaseDate) {
+    public Movie(String id, String title, String poster_path, String overview, Double vote_average, String release_date) {
         this.id = id;
         this.title = title;
-        this.posterPath = posterPath;
+        this.poster_path = poster_path;
         this.overview = overview;
-        this.rating = rating;
-        this.releaseDate = releaseDate;
+        this.vote_average = vote_average;
+        this.release_date = release_date;
     }
 
     public Movie(Parcel in) {
         this.id = in.readString();
         this.title = in.readString();
-        this.posterPath = in.readString();
+        this.poster_path = in.readString();
         this.overview = in.readString();
-        this.rating = in.readDouble();
-        this.releaseDate = in.readString();
-    }
-
-    public Movie(String posterPath) {
-        this.posterPath = posterPath;
+        this.vote_average = in.readDouble();
+        this.release_date = in.readString();
     }
 
     public String getId() {
@@ -44,20 +41,20 @@ public class Movie implements Parcelable {
         return title;
     }
 
-    public String getPosterPath() {
-        return posterPath;
+    public String getPoster_path() {
+        return HTTP_IMAGE_TMDB + poster_path;
     }
 
     public String getOverview() {
         return overview;
     }
 
-    public Double getRating() {
-        return rating;
+    public Double getVote_average() {
+        return vote_average;
     }
 
-    public String getReleaseDate() {
-        return releaseDate;
+    public String getRelease_date() {
+        return release_date;
     }
 
     @Override
@@ -69,10 +66,10 @@ public class Movie implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(id);
         parcel.writeString(title);
-        parcel.writeString(posterPath);
+        parcel.writeString(poster_path);
         parcel.writeString(overview);
-        parcel.writeDouble(rating);
-        parcel.writeString(releaseDate);
+        parcel.writeDouble(vote_average);
+        parcel.writeString(release_date);
     }
 
     public static final Creator CREATOR = new Creator() {
@@ -85,4 +82,15 @@ public class Movie implements Parcelable {
         }
     };
 
+    @Override
+    public String toString() {
+        return "\n\nMovie{" +
+                "\nid='" + id + '\'' +
+                ", \ntitle='" + title + '\'' +
+                ", \nposter_path='" + poster_path + '\''+
+                ", \noverview='" + overview + '\''+
+                ", \nvote_average=" + vote_average +
+                ", \nrelease_date='" + release_date + '\'' +
+                '}';
+    }
 }
