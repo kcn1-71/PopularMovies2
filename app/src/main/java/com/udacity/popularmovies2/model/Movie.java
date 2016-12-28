@@ -5,31 +5,25 @@ import android.os.Parcelable;
 
 public class Movie implements Parcelable {
 
-    private static final String LOG_TAG = Movie.class.getSimpleName();
     private static final String HTTP_IMAGE_TMDB = "http://image.tmdb.org/t/p/w300";
 
     private String id;
     private String title;
     private String poster_path;
     private String overview;
-    private Double vote_average;
+    private String vote_average;
     private String release_date;
 
-    public Movie(String id, String title, String poster_path, String overview, Double vote_average, String release_date) {
-        this.id = id;
-        this.title = title;
-        this.poster_path = poster_path;
-        this.overview = overview;
-        this.vote_average = vote_average;
-        this.release_date = release_date;
+    public Movie() {
+        this.id = "-1";
     }
 
-    public Movie(Parcel in) {
+    private Movie(Parcel in) {
         this.id = in.readString();
         this.title = in.readString();
         this.poster_path = in.readString();
         this.overview = in.readString();
-        this.vote_average = in.readDouble();
+        this.vote_average = in.readString();
         this.release_date = in.readString();
     }
 
@@ -49,7 +43,7 @@ public class Movie implements Parcelable {
         return overview;
     }
 
-    public Double getVote_average() {
+    public String getVote_average() {
         return vote_average;
     }
 
@@ -68,7 +62,7 @@ public class Movie implements Parcelable {
         parcel.writeString(title);
         parcel.writeString(poster_path);
         parcel.writeString(overview);
-        parcel.writeDouble(vote_average);
+        parcel.writeString(vote_average);
         parcel.writeString(release_date);
     }
 

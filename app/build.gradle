@@ -23,6 +23,9 @@ android {
     buildTypes.each {
         it.buildConfigField 'String', 'IMDB_API_KEY', "\"5e2a7d8ba6def179c3489b1a45a7bbb1\""
     }
+    dataBinding {
+        enabled = true
+    }
 
 
 }

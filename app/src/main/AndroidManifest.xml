@@ -10,26 +10,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
-            android:name=".GridActivity"
+            android:name=".ui.GridActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".settings.SettingsActivity"
             android:label="@string/settings_text"
-            android:parentActivityName=".GridActivity">
+            android:parentActivityName=".ui.GridActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".GridActivity" />
+                android:value=".ui.GridActivity" />
         </activity>
-
+        <activity android:name=".ui.DetailsActivity"></activity>
     </application>
 
 </manifest>

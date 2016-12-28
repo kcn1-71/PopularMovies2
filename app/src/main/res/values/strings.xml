@@ -7,6 +7,8 @@
     <string name="settings_text">Settings</string>
     <string name="error_text">ERROR</string>
 
+    <string name="rating_text_formatted">%.1f/10</string>
+    <string name="by_text_formatted">By %s:</string>
 
     <string name="pref_title">Order by</string>
     <string name="pref_key">order by</string>
@@ -18,5 +20,9 @@
     <string name="pref_order_by_popularity_value" translatable="false">popular</string>
     <string name="pref_order_by_top_rated_value" translatable="false">top_rated</string>
     <string name="pref_order_by_favorites_value" translatable="false">favorites</string>
+    <string name="trailers_text">Trailers:</string>
+    <string name="reviews_text">Reviews:</string>
+    <string name="by_text">By</string>
+    <string name="unfavorite_text">Unfavorite</string>
 
 </resources>
